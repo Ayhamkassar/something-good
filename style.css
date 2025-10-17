@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    transition: background 0.5s, color 0.5s;
+    background:linear-gradient(135deg, #ff4d4d, #000000);
+    color: #fff;
+    text-align: center;
+  }
+  
+  select {
+    background: #1e1e1e;
+    color: #fff;
+    border: 2px solid #555;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin: 20px;
+    font-size: 16px;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #111;
+      color: #fff;
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    body {
+      background: #f5f5f5;
+      color: #111;
+    }
+  }
+  
+  header h1 {
+    margin: 20px 0;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: colorPulse 3s infinite;
+  }
+  
+  @keyframes colorPulse {
+    0% {
+      color: #ff4d4d;
+    }
+    50% {
+      color: #4dff88;
+    }
+    100% {
+      color: #4d88ff;
+    }
+  }
+  
+  canvas {
+    border: 3px solid #fff;
+    border-radius: 20px;
+    cursor: crosshair;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    width: 90vw;
+    height: auto;
+    max-width: 1200px;
+  }
+  
+  button {
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.5s, transform 0.2s;
+    background: linear-gradient(135deg, #4d88ff, #4dff88);
+    color: #fff;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  #message {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    button {
+      width: 90%;
+      max-width: 300px;
+    }
+  
+    button:hover {
+      background: linear-gradient(135deg, #4dff88, #4d88ff);
+      transform: scale(1.05);
+    }
+  
+    canvas {
+      width: 90vw;
+      height: auto;
+    }
+  
+    header h1 {
+      font-size: 1.5em;
+    }
+  }
+  .color-picker {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .color-picker input {
+    width: 50px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+  
+  

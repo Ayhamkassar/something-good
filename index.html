@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>هدية فنية</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="mainTitle">🎨 هديتك الفنية الخاصة 🎨</h1>
+  </header>
+  <label for="ratioSelect">اختيار نسبة الإطار:</label>
+  <select id="ratioSelect">
+    <option value="4:3">4:3</option>
+    <option value="16:9">16:9</option>
+    <option value="1:1">1:1</option>
+    <option value="3:2">3:2</option>
+    <option value="9:16">9:16 (عمودي)</option>
+  </select>
+
+  <br>
+
+  <main>
+    <canvas id="artCanvas" width="1200" height="600"></canvas>
+    <div class="buttons">
+      <button id="generateBtn">رسم لوحة جديدة</button>
+      <button id="saveBtn">حفظ اللوحة كصورة</button>
+      <button id="changeBgBtn">تغيير الخلفية</button>
+      <button id="eraserBtn">🧽 محاية</button>
+      <button id="aiCompleteBtn">AI Complete 🎨</button>
+
+      <button id="langBtn">English</button>
+    </div>
+    <div id="message"></div>
+  </main>
+
+  <div class="toolbar">
+    <div class="color-picker">
+      <label for="colorSelect">🎨 اختر اللون:</label>
+      <input type="color" id="colorSelect" value="#ffffff">
+    </div>
+    <label for="brushSizeSelect">سماكة القلم:</label>
+    <select id="brushSizeSelect">
+      <option value="2">رفيع</option>
+      <option value="4" selected>متوسط</option>
+      <option value="8">سميك</option>
+      <option value="12">سميك جداً</option>
+    </select>
+  </div>
+  
+  
+
+  <script src="main.js"></script>
+</body>
+</html>
